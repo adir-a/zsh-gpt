@@ -4,10 +4,10 @@ Simple ZSH plugin to allow querying ChatGPT from the command line. Inspired by a
 for more great examples.
 
 ```
-❯ g hello world
+❯ gpt hello world
 Hello there! How can I assist you today?
 
-❯ g how do I change the date on linux
+❯ gpt how do I change the date on linux
 To change the date on Linux, you can use the "date" command with the appropriate parameters.
 
 For example, to set the date to January 1, 2025 at 12:00 AM, you could use the following command:
@@ -17,7 +17,7 @@ The "s" option specifies that you want to set the date and time, and the argumen
 
 You will need to run this command as root (using "sudo") in order to have the necessary permissions to change the system date.
 
-❯ g write a zsh command to extract the third field from a csv
+❯ gpt write a zsh command to extract the third field from a csv
 Assuming the csv is delimited by commas, you can use the `cut` command to extract the third field:
 
 zsh
@@ -50,9 +50,9 @@ Set OPENAI_API_KEY in `.zshrc` or otherwise:
 4. Start a new terminal session
 
 ## Usage
-+ Type `g [query]` where `query` is your question.
++ Type `gpt [query]` where `query` is your question.
 + Use quotes, or not, but be aware of symbols like quotes:
-  `g What is the graphical file browser on Ubuntu`
-  `g "What's Ubuntu's graphical file browser called?`
+  `gpt What is the graphical file browser on Ubuntu`
+  `gpt "What's Ubuntu's graphical file browser called?`
 + Provide data using subcommands, be careful of quotes:
-  `g "Calculate the average PointsPerGame by Position from the following:" $(cat nba.csv | sed 's/"//g')`
+  `gpt "Calculate the average PointsPerGame by Position from the following:" $(cat nba.csv | sed 's/"//g')`
